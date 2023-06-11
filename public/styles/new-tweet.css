@@ -1,0 +1,27 @@
+.new-tweet {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#tweet-text {
+    width: 100%;
+    border-bottom: 4px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+button {
+    background-color: rgb(61, 61, 146);
+    color: white;
+    font-family: 'Bungee', sans-serif, cursive;
+}
+
+.counter {
+    float: right;
+    font-family: 'Bungee', sans-serif, cursive;
+}
+
+.danger{
+    color:red;
+}

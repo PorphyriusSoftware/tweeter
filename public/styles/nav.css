@@ -1,0 +1,28 @@
+nav {
+
+    height: 120px;
+    width: 100vw;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    font-family: 'Bungee', sans-serif, cursive;
+    padding: 1.5em;
+    display: inline-block;
+
+}
+
+#write-tweet {
+    padding: 1.5em;
+    margin-right: 1.5em;
+    float: right;
+    text-align: center;
+}
+
+#write-tweet i {
+    color: red
+}
