@@ -61,7 +61,7 @@ main {
 
 }
 
-.tweet header i {
+.tweet header i, .tweet header img{
   margin-right: 1em;
 }
 
