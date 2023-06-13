@@ -44,3 +44,18 @@ button:hover {
     color: aliceblue;
     font-weight: bolder;
 }
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+    .new-tweet {
+        width: 90%;
+    }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+    .new-tweet {
+        width: 90%;
+    }
+}
