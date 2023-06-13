@@ -7,7 +7,14 @@
 $(document).ready(function () {
 
     console.log('ready client');
-    
+
+
+    const escape = (str) => {
+        let div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    };
+
 
 
     const createTweetElement = ({ user, content, created_at }) => {
@@ -21,7 +28,7 @@ $(document).ready(function () {
             <span>${user.name}</span>
             <h5 class="userAt">${user.handle}</h5>
           </header>
-          <section>${content.text}</section>
+          <section>${escape(content.text)}</section>
           <footer>
             <span>${timeago.format(created_at)}</span>
             <div class="footer-icons">
@@ -49,40 +56,44 @@ $(document).ready(function () {
 
     }
 
-    
-    
+
+
     $('#sendTweet').click(e => {
 
         const tweetText = $('#tweet-text').val();
 
         const form = $('#tweet-form');
+        const error = $('#error');
+        error.hide();
 
         if (tweetText.length === 0) {
-            alert('Please enter a tweet');
+            error.text('Please enter a tweet');
+            error.slideDown();
             return;
         }
 
         if (tweetText.length > 140) {
-            alert('Tweet to long......');
+            error.text('Tweet to long......');
+            error.slideDown();
             return;
         }
         const data = form.serialize();
 
-   
+
 
         $.ajax({
             type: 'POST',
             data: data,
             url: '/tweets'
         }).then(response => {
-            
+
             loadTweets();
             form.trigger('reset');
         }).catch(err => {
             console.log('error', err);
 
         });
-      
+
 
     });
 
@@ -104,5 +115,36 @@ $(document).ready(function () {
      * Initial load of tweets
      */
     loadTweets();
+
+
+    $('#formTogler').click((e) => {
+        const toggler = $(e.target);
+
+        const section = $('#tweet-form');
+
+        if (section.is(':visible')) {
+            section.slideUp();
+            toggler.addClass('fa-angles-down').removeClass('fa-angles-up');
+        } else {
+            section.slideDown();
+            toggler.addClass('fa-angles-up').removeClass('fa-angles-down');
+            $('#tweet-text').focus();
+        }
+    });
+
+    $(document).on('scroll', (e) => {
+        let scrollAmount = window.scrollY;
+        console.log(scrollAmount);
+        if (scrollAmount > 0) {
+            $('#scrollUp').show();
+        }else{
+            $('#scrollUp').hide();
+        }
+        
+        
+    });
+
+
+
 
 });

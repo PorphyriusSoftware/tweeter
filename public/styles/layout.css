@@ -61,7 +61,7 @@ main {
 
 }
 
-.tweet header i, .tweet header img{
+.tweet header i, .tweet header img {
   margin-right: 1em;
 }
 
@@ -90,4 +90,30 @@ main {
 
 .footer-icons i:hover {
   color: orange;
+}
+
+#scrollUp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: red;
+
+
+}
+
+#scrollUp a {
+  color: aliceblue;
+}
+
+#scrollUp div {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#scrollUp div:hover {
+  margin-top: -5px;
 }
