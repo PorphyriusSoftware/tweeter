@@ -1,0 +1,30 @@
+$nav-background-color:#47057e;
+$nav-color:#ffffff;
+
+
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: $nav-background-color;
+  color: $nav-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  font-family: "Bungee", sans-serif, cursive;
+  padding: 1.5em;
+  display: inline-block;
+}
+
+#write-tweet {
+  padding: 1.5em;
+  margin-right: 1.5em;
+  float: right;
+  text-align: center;
+  i {
+    color: red;
+  }
+}

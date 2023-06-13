@@ -16,6 +16,7 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -26,6 +27,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 main {
   width: 90vw;
   margin: 0 auto;
@@ -33,38 +35,44 @@ main {
 
 /* font-family: 'Bungee', cursive; */
 /* font-family: 'Source Sans Pro', sans-serif; */
+
 .tweet {
   width: 50%;
   margin: 1em auto;
   border: black solid 3px;
-}
-.tweet:hover {
-  box-shadow: 10px 5px 5px darkgray;
-}
-.tweet header {
-  background-image: none;
-  background-color: aliceblue;
-  width: 100%;
-  display: block;
-  height: auto;
-  margin-top: 10px;
-  padding: 2.5em;
-}
-.tweet header i,
-.tweet header img {
-  margin-right: 1em;
-}
-.tweet section {
-  display: block;
-  margin: 0 1em;
-  width: auto;
-  border-bottom: 3px solid black;
-  padding: 2em;
-}
-.tweet footer {
-  display: block;
-  margin: 1em;
-  width: auto;
+  &:hover {
+    box-shadow: 10px 5px 5px darkgray;
+  }
+
+  header {
+    background-image: none;
+    background-color: aliceblue;
+    width: 100%;
+
+    display: block;
+    height: auto;
+    margin-top: 10px;
+    padding: 2.5em;
+
+    i,
+    img {
+      margin-right: 1em;
+    }
+  }
+
+  section {
+    display: block;
+    margin: 0 1em;
+    width: auto;
+    border-bottom: 3px solid black;
+    padding: 2em;
+  }
+
+  footer {
+    display: block;
+    margin: 1em;
+    width: auto;
+  }
 }
 
 .footer-icons,
@@ -74,29 +82,34 @@ main {
 
 .footer-icons {
   color: blue;
-}
-.footer-icons i:hover {
-  color: orange;
+
+  i:hover {
+    color: orange;
+  }
 }
 
 #scrollUp {
   position: fixed;
   bottom: 0;
   right: 0;
+
   width: 70px;
   height: 70px;
   border-radius: 35px;
   background-color: red;
-}
-#scrollUp a {
-  color: aliceblue;
-}
-#scrollUp div {
-  text-align: center;
-  padding-top: 20px;
-}
-#scrollUp div:hover {
-  margin-top: -5px;
+
+  a {
+    color: aliceblue;
+  }
+
+  div {
+    text-align: center;
+    padding-top: 20px;
+
+    &:hover {
+      margin-top: -5px;
+    }
+  }
 }
 
 /* Tablet Styles */
@@ -105,14 +118,17 @@ main {
     width: 90%;
   }
 }
+
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
   }
+
   .container {
     margin-top: 120px;
   }
+
   .tweet {
     width: 90%;
   }

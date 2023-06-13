@@ -1,27 +1,22 @@
 header {
-    display: flex;
-    height: 400px;
-    width: 100vw;
-    margin-top: 120px;
-    background-color: blueviolet;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2.5em;
-
-    background-image: url(../images/brick-wall.png);
+  display: flex;
+  height: 400px;
+  width: 100vw;
+  margin-top: 120px;
+  background-color: blueviolet;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2.5em;
+  background-image: url(../images/brick-wall.png);
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 768px) {
-    
-}
-
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
-    header {
-        max-width: 33vw;
-        margin-top: 150px;
-        margin-left: 2em;
-    }
+  header {
+    max-width: 33vw;
+    margin-top: 150px;
+    margin-left: 2em;
+  }
 }

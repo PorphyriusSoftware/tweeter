@@ -1,61 +1,58 @@
 .new-tweet {
-    width: 50%;
-    margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #tweet-text {
-    width: 100%;
-    border-bottom: 4px solid #000000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+  width: 100%;
+  border-bottom: 4px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 button {
-    background-color: rgb(61, 61, 146);
-    color: white;
-    font-family: 'Bungee', sans-serif, cursive;
+  background-color: rgb(61, 61, 146);
+  color: white;
+  font-family: "Bungee", sans-serif, cursive;
 }
-
 button:hover {
-    box-shadow: 10px 5px 5px darkgray;
-    background-color: orange;
+  box-shadow: 10px 5px 5px darkgray;
+  background-color: orange;
 }
 
 #formTogler:hover {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 .counter {
-    float: right;
-    font-family: 'Bungee', sans-serif, cursive;
+  float: right;
+  font-family: "Bungee", sans-serif, cursive;
 }
 
 .danger {
-    color: red;
+  color: red;
 }
 
 .error-message {
-    width: 100%;
-    background-color: red;
-    font-size: 1em;
-    padding: .5em;
-    border-radius: 15px;
-    color: aliceblue;
-    font-weight: bolder;
+  width: 100%;
+  background-color: red;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 15px;
+  color: aliceblue;
+  font-weight: bolder;
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 768px) {
-    .new-tweet {
-        width: 90%;
-    }
+  .new-tweet {
+    width: 90%;
+  }
 }
-
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
-
-    .new-tweet {
-        width: 90%;
-    }
+  .new-tweet {
+    width: 90%;
+  }
 }
